@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junex - Blog & Insights</title>
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons via CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Lenis Smooth Scrolling via CDN -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="min-h-screen bg-[#f8f9fb] text-slate-800">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center cursor-pointer group">
+                    <span class="text-2xl font-extrabold tracking-tight text-slate-900">
+                        Junex<span class="text-[#ff4fa3]">.</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html"
+                        class="nav-link text-sm font-medium transition-colors text-slate-600 hover:text-[#ff4fa3]">Home</a>
+                    <a href="about.html"
+                        class="nav-link text-sm font-medium transition-colors text-slate-600 hover:text-[#ff4fa3]">About</a>
+                    <a href="services.html"
+                        class="nav-link text-sm font-medium transition-colors text-slate-600 hover:text-[#ff4fa3]">Services</a>
+                    <a href="products.html"
+                        class="nav-link text-sm font-medium transition-colors text-slate-600 hover:text-[#ff4fa3]">Products</a>
+                    <a href="portfolio.html"
+                        class="nav-link text-sm font-medium transition-colors text-slate-600 hover:text-[#ff4fa3]">Portfolio</a>
+                    <a href="blog.html"
+                        class="nav-link text-sm font-medium transition-colors text-slate-600 hover:text-[#ff4fa3]">Blog</a>
+                    <a href="contact.html"
+                        class="nav-link text-sm font-medium transition-colors text-slate-600 hover:text-[#ff4fa3]">Contact</a>
+                    <a href="contact.html"
+                        class="bg-[#ff4fa3] text-white px-6 py-2.5 rounded-full font-medium hover:bg-[#e63c8f] transition-all duration-300 hover:shadow-lg hover:shadow-[#ff4fa3]/30 transform hover:-translate-y-0.5 inline-block">
+                        Get Started
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()" class="text-slate-600 hover:text-[#ff4fa3] focus:outline-none">
+                        <i data-lucide="menu" id="mobile-menu-icon-menu" class="w-7 h-7"></i>
+                        <i data-lucide="x" id="mobile-menu-icon-close" class="w-7 h-7 hidden"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-6 space-y-2 shadow-xl absolute w-full">
+            <a href="index.html"
+                class="mobile-nav-link block w-full text-left px-4 py-3 rounded-lg font-medium transition-colors text-slate-600">Home</a>
+            <a href="about.html"
+                class="mobile-nav-link block w-full text-left px-4 py-3 rounded-lg font-medium transition-colors text-slate-600">About</a>
+            <a href="services.html"
+                class="mobile-nav-link block w-full text-left px-4 py-3 rounded-lg font-medium transition-colors text-slate-600">Services</a>
+            <a href="products.html"
+                class="mobile-nav-link block w-full text-left px-4 py-3 rounded-lg font-medium transition-colors text-slate-600">Products</a>
+            <a href="portfolio.html"
+                class="mobile-nav-link block w-full text-left px-4 py-3 rounded-lg font-medium transition-colors text-slate-600">Portfolio</a>
+            <a href="blog.html"
+                class="mobile-nav-link block w-full text-left px-4 py-3 rounded-lg font-medium transition-colors text-slate-600">Blog</a>
+            <a href="contact.html"
+                class="mobile-nav-link block w-full text-left px-4 py-3 rounded-lg font-medium transition-colors text-slate-600">Contact</a>
+            <div class="pt-4 px-4">
+                <a href="contact.html"
+                    class="block w-full bg-[#ff4fa3] text-white px-6 py-3 rounded-xl font-medium hover:bg-[#e63c8f] transition-all text-center">
+                    Get Your Website Today
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="pt-20 min-h-[calc(100vh-300px)]">
+        <!-- ================= BLOG PAGE ================= -->
+        <div class="page-section animate-fade-in bg-[#f8f9fb] pb-24">
+            <div class="bg-white py-20 border-b border-gray-100 mb-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Insights & Resources</h1>
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto">Expert advice on personal branding, web design,
+                        and digital growth for professionals.</p>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <article
+                        class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow group">
+                        <div class="h-48 bg-gradient-to-r from-slate-100 to-slate-200 relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-full h-full opacity-20">
+                                <div
+                                    class="absolute w-32 h-32 rounded-full bg-[#ff4fa3] -top-10 -left-10 blur-xl group-hover:scale-150 transition-transform duration-700">
+                                </div>
+                                <div
+                                    class="absolute w-40 h-40 rounded-full bg-blue-400 bottom-0 right-0 blur-xl group-hover:scale-150 transition-transform duration-700">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center text-xs mb-4">
+                                <span
+                                    class="bg-[#fff0f7] text-[#ff4fa3] font-semibold px-3 py-1 rounded-full mr-4">Healthcare</span>
+                                <span class="text-slate-400">Oct 12, 2023</span>
+                            </div>
+                            <h3
+                                class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-[#ff4fa3] transition-colors cursor-pointer">
+                                Why Every Doctor Needs a Personal Website in 2024</h3>
+                            <p class="text-slate-600 mb-6 line-clamp-2">Relying solely on hospital directories is no
+                                longer enough. Learn how a personal website builds patient trust before they even step
+                                into your clinic.</p>
+                            <button class="text-[#ff4fa3] font-semibold flex items-center hover:text-[#e63c8f]">Read
+                                Article <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i></button>
+                        </div>
+                    </article>
+
+                    <article
+                        class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow group">
+                        <div class="h-48 bg-gradient-to-r from-slate-100 to-slate-200 relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-full h-full opacity-20">
+                                <div
+                                    class="absolute w-32 h-32 rounded-full bg-[#ff4fa3] -top-10 -left-10 blur-xl group-hover:scale-150 transition-transform duration-700">
+                                </div>
+                                <div
+                                    class="absolute w-40 h-40 rounded-full bg-blue-400 bottom-0 right-0 blur-xl group-hover:scale-150 transition-transform duration-700">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center text-xs mb-4">
+                                <span
+                                    class="bg-[#fff0f7] text-[#ff4fa3] font-semibold px-3 py-1 rounded-full mr-4">Tech</span>
+                                <span class="text-slate-400">Oct 05, 2023</span>
+                            </div>
+                            <h3
+                                class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-[#ff4fa3] transition-colors cursor-pointer">
+                                Best Portfolio Practices for Senior Software Engineers</h3>
+                            <p class="text-slate-600 mb-6 line-clamp-2">Your GitHub is great, but a curated portfolio
+                                tells your professional story. Discover what FAANG recruiters look for in an engineering
+                                portfolio.</p>
+                            <button class="text-[#ff4fa3] font-semibold flex items-center hover:text-[#e63c8f]">Read
+                                Article <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i></button>
+                        </div>
+                    </article>
+
+                    <article
+                        class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow group">
+                        <div class="h-48 bg-gradient-to-r from-slate-100 to-slate-200 relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-full h-full opacity-20">
+                                <div
+                                    class="absolute w-32 h-32 rounded-full bg-[#ff4fa3] -top-10 -left-10 blur-xl group-hover:scale-150 transition-transform duration-700">
+                                </div>
+                                <div
+                                    class="absolute w-40 h-40 rounded-full bg-blue-400 bottom-0 right-0 blur-xl group-hover:scale-150 transition-transform duration-700">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center text-xs mb-4">
+                                <span
+                                    class="bg-[#fff0f7] text-[#ff4fa3] font-semibold px-3 py-1 rounded-full mr-4">Business</span>
+                                <span class="text-slate-400">Sep 28, 2023</span>
+                            </div>
+                            <h3
+                                class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-[#ff4fa3] transition-colors cursor-pointer">
+                                How Consultants Can Generate Leads on Autopilot</h3>
+                            <p class="text-slate-600 mb-6 line-clamp-2">Stop chasing clients. Learn how to optimize your
+                                service website to capture high-quality leads while you sleep.</p>
+                            <button class="text-[#ff4fa3] font-semibold flex items-center hover:text-[#e63c8f]">Read
+                                Article <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i></button>
+                        </div>
+                    </article>
+
+                    <article
+                        class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow group">
+                        <div class="h-48 bg-gradient-to-r from-slate-100 to-slate-200 relative overflow-hidden">
+                            <div class="absolute top-0 left-0 w-full h-full opacity-20">
+                                <div
+                                    class="absolute w-32 h-32 rounded-full bg-[#ff4fa3] -top-10 -left-10 blur-xl group-hover:scale-150 transition-transform duration-700">
+                                </div>
+                                <div
+                                    class="absolute w-40 h-40 rounded-full bg-blue-400 bottom-0 right-0 blur-xl group-hover:scale-150 transition-transform duration-700">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center text-xs mb-4">
+                                <span
+                                    class="bg-[#fff0f7] text-[#ff4fa3] font-semibold px-3 py-1 rounded-full mr-4">Design</span>
+                                <span class="text-slate-400">Sep 15, 2023</span>
+                            </div>
+                            <h3
+                                class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-[#ff4fa3] transition-colors cursor-pointer">
+                                The Anatomy of a Perfect 'About Me' Page</h3>
+                            <p class="text-slate-600 mb-6 line-clamp-2">Most 'About' pages are boring resumes. Here is
+                                how to write a compelling professional narrative that connects with your ideal clients.
+                            </p>
+                            <button class="text-[#ff4fa3] font-semibold flex items-center hover:text-[#e63c8f]">Read
+                                Article <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i></button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-1">
+                    <span class="text-2xl font-extrabold tracking-tight text-white mb-6 block">
+                        Junex<span class="text-[#ff4fa3]">.</span>
+                    </span>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                        Your Digital Identity, Perfected. We specialize in building professional digital presences for
+                        individuals who want to stand out, build trust, and grow their practice.
+                    </p>
+                    <div class="flex space-x-4">
+                        <div
+                            class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-[#ff4fa3] hover:text-white transition-colors cursor-pointer">
+                            <i data-lucide="globe" class="w-4 h-4"></i>
+                        </div>
+                        <div
+                            class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-[#ff4fa3] hover:text-white transition-colors cursor-pointer">
+                            <i data-lucide="monitor" class="w-4 h-4"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html"
+                                class="text-slate-400 hover:text-[#ff4fa3] transition-colors text-sm">Home</a></li>
+                        <li><a href="about.html"
+                                class="text-slate-400 hover:text-[#ff4fa3] transition-colors text-sm">About</a></li>
+                        <li><a href="services.html"
+                                class="text-slate-400 hover:text-[#ff4fa3] transition-colors text-sm">Services</a></li>
+                        <li><a href="products.html"
+                                class="text-slate-400 hover:text-[#ff4fa3] transition-colors text-sm">Products</a></li>
+                        <li><a href="portfolio.html"
+                                class="text-slate-400 hover:text-[#ff4fa3] transition-colors text-sm">Portfolio</a></li>
+                        <li><a href="contact.html"
+                                class="text-slate-400 hover:text-[#ff4fa3] transition-colors text-sm">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li class="text-slate-400 text-sm">Personal Portfolios</li>
+                        <li class="text-slate-400 text-sm">Professional Profiles</li>
+                        <li class="text-slate-400 text-sm">Lead Generation Pages</li>
+                        <li class="text-slate-400 text-sm">Website Redesign</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+                    <p class="text-slate-400 text-sm mb-4">Get web design tips tailored for professionals.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email address"
+                            class="bg-slate-800 text-white px-4 py-2 rounded-l-lg focus:outline-none focus:ring-1 focus:ring-[#ff4fa3] w-full text-sm" />
+                        <button
+                            class="bg-[#ff4fa3] px-4 py-2 rounded-r-lg hover:bg-[#e63c8f] transition-colors flex items-center justify-center">
+                            <i data-lucide="send" class="w-4 h-4 text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-slate-500 text-sm">
+                <p>&copy; 2024 Junex IT Firm. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white cursor-pointer">Privacy Policy</a>
+                    <a href="#" class="hover:text-white cursor-pointer">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Mock Live Chat -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <div id="chat-window"
+            class="hidden bg-white rounded-2xl shadow-2xl w-80 mb-4 overflow-hidden border border-gray-100 transform transition-all origin-bottom-right">
+            <div class="bg-gradient-to-r from-[#ff4fa3] to-[#ff84c3] p-4 text-white flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-sm">Junex Support</h4>
+                        <p class="text-xs text-white/80">Typically replies in minutes</p>
+                    </div>
+                </div>
+                <button onclick="toggleChat()" class="text-white/80 hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div class="p-4 h-64 bg-[#f8f9fb] flex flex-col">
+                <div class="bg-white p-3 rounded-lg rounded-tl-none shadow-sm text-sm text-slate-700 w-4/5 mb-3">
+                    Hi there! 👋 How can we help you build your digital presence today?
+                </div>
+                <div class="mt-auto relative">
+                    <input type="text" placeholder="Type your message..."
+                        class="w-full bg-white border border-gray-200 rounded-full pl-4 pr-10 py-2 text-sm focus:outline-none focus:border-[#ff4fa3]" />
+                    <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-[#ff4fa3] p-1">
+                        <i data-lucide="send" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button id="chat-toggle-btn" onclick="toggleChat()"
+            class="w-14 h-14 rounded-full flex items-center justify-center shadow-xl shadow-pink-500/30 transition-transform duration-300 bg-[#ff4fa3] hover:scale-110">
+            <i data-lucide="message-circle" class="text-white w-6 h-6"></i>
+        </button>
+    </div>
+
+    <!-- External Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
